@@ -20,6 +20,7 @@
 		89EC6CF91C2351360034A68F /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CF31C2351360034A68F /* friends@2x.png */; settings = {ASSET_TAGS = (); }; };
 		89EC6CFA1C2351360034A68F /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CF41C2351360034A68F /* inbox.png */; settings = {ASSET_TAGS = (); }; };
 		89EC6CFB1C2351360034A68F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CF51C2351360034A68F /* inbox@2x.png */; settings = {ASSET_TAGS = (); }; };
+		89EC6CFF1C235E4E0034A68F /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CFE1C235E4E0034A68F /* InboxViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		89EC6CF31C2351360034A68F /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "friends@2x.png"; path = "tab_bar_icons/friends@2x.png"; sourceTree = "<group>"; };
 		89EC6CF41C2351360034A68F /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inbox.png; path = tab_bar_icons/inbox.png; sourceTree = "<group>"; };
 		89EC6CF51C2351360034A68F /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inbox@2x.png"; path = "tab_bar_icons/inbox@2x.png"; sourceTree = "<group>"; };
+		89EC6CFD1C235E4E0034A68F /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		89EC6CFE1C235E4E0034A68F /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
 				89EC6CC11C2349CE0034A68F /* AppDelegate.m */,
 				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
+				89EC6CFD1C235E4E0034A68F /* InboxViewController.h */,
+				89EC6CFE1C235E4E0034A68F /* InboxViewController.m */,
 				89EC6CC91C2349CE0034A68F /* Assets.xcassets */,
 				89EC6CCB1C2349CE0034A68F /* LaunchScreen.storyboard */,
 				89EC6CCE1C2349CE0034A68F /* Info.plist */,
@@ -299,6 +304,7 @@
 			files = (
 				89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */,
 				89EC6CBF1C2349CE0034A68F /* main.m in Sources */,
+				89EC6CFF1C235E4E0034A68F /* InboxViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
