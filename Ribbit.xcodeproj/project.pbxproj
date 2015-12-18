@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894C59491C248FCB009A0275 /* parsekeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 894C59481C248FCB009A0275 /* parsekeys.plist */; settings = {ASSET_TAGS = (); }; };
 		89EC6CBF1C2349CE0034A68F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CBE1C2349CE0034A68F /* main.m */; };
 		89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CC11C2349CE0034A68F /* AppDelegate.m */; };
 		89EC6CC81C2349CE0034A68F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CC61C2349CE0034A68F /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		894C59481C248FCB009A0275 /* parsekeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parsekeys.plist; sourceTree = "<group>"; };
 		89EC6CBA1C2349CE0034A68F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EC6CBE1C2349CE0034A68F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89EC6CC01C2349CE0034A68F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
+				894C59481C248FCB009A0275 /* parsekeys.plist */,
 				89EC6CC11C2349CE0034A68F /* AppDelegate.m */,
 				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
 				89EC6CFD1C235E4E0034A68F /* InboxViewController.h */,
@@ -349,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894C59491C248FCB009A0275 /* parsekeys.plist in Resources */,
 				89EC6CCD1C2349CE0034A68F /* LaunchScreen.storyboard in Resources */,
 				89EC6CF81C2351360034A68F /* friends.png in Resources */,
 				89EC6CF91C2351360034A68F /* friends@2x.png in Resources */,
@@ -616,6 +620,7 @@
 				89EC6CE91C2349CE0034A68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89EC6CEA1C2349CE0034A68F /* Build configuration list for PBXNativeTarget "RibbitTests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +629,7 @@
 				89EC6CEC1C2349CE0034A68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89EC6CED1C2349CE0034A68F /* Build configuration list for PBXNativeTarget "RibbitUITests" */ = {
 			isa = XCConfigurationList;
@@ -632,6 +638,7 @@
 				89EC6CEF1C2349CE0034A68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

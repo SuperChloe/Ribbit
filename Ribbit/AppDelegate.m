@@ -17,10 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
+    // Using plist to hide parse keys from github public repo
+    // http://stackoverflow.com/a/12250837
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"parsekeys" ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    
     // Initialize Parse.
-    [Parse setApplicationId:@"mgmM0DJ3IaXOORmbdvtNNg288qbrh1qGIFirPmMY"
-                  clientKey:@"yJYE4jEPHfGXMyvLVZYz2dxPXUTvuo8GzCbU2JuO"];
+    [Parse setApplicationId:dict[@"parseAppId"]
+                  clientKey:dict[@"parseClientKey"]];
     
     return YES;
 }
