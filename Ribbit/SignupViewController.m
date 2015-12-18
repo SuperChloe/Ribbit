@@ -7,6 +7,7 @@
 //
 
 #import "SignupViewController.h"
+#import <Parse/Parse.h>
 
 @interface SignupViewController ()
 
@@ -49,6 +50,28 @@
         [alertView addAction:defaultAction];
         [self presentViewController:alertView animated:YES completion:nil];
 
+    } else {
+        PFUser *newUser = [PFUser user];
+        newUser.username = username;
+        newUser.password = password;
+        newUser.email = email;
+        
+        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if (error) {
+                UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"Sorry!"
+                                                                                   message:[error.userInfo objectForKey:@"error"]
+                                                                            preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction * action) {}];
+                
+                [alertView addAction:defaultAction];
+                [self presentViewController:alertView animated:YES completion:nil];
+            } else {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+        }];
+        
     }
 }
 

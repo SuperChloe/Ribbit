@@ -27,7 +27,13 @@
                             <outlet property="delegate" destination="E9p-kg-6QQ" id="r9L-v2-rnL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ribbit" id="GXj-x6-WRV"/>
+                    <navigationItem key="navigationItem" title="Ribbit" id="GXj-x6-WRV">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="Ogv-ZT-b8c">
+                            <connections>
+                                <action selector="logout:" destination="E9p-kg-6QQ" id="nD4-J0-OxB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Wrq-BI-yi0" kind="push" identifier="showLogin" id="ToH-Ql-LsA"/>
                     </connections>
@@ -60,6 +66,9 @@
                                 <rect key="frame" x="20" y="195" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="login:" destination="Wrq-BI-yi0" eventType="touchUpInside" id="PDw-WE-sB8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BgJ-jr-Vrf">
                                 <rect key="frame" x="207" y="247" width="93" height="30"/>
@@ -81,6 +90,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ribbit" id="G1d-Hf-a3h"/>
+                    <connections>
+                        <outlet property="passwordField" destination="UVS-tZ-Za3" id="5fg-Ak-UUB"/>
+                        <outlet property="usernameField" destination="3W1-R0-jvT" id="MKo-W9-Qug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVf-BJ-xcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +138,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="grX-UN-SQ9">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="grX-UN-SQ9" id="Q7j-Ji-mUh">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
