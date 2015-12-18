@@ -18,10 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Testing Parse..
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+
     
     [self performSegueWithIdentifier:@"showLogin" sender:self];
 

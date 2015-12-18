@@ -39,7 +39,7 @@
         <!--Ribbit-->
         <scene sceneID="1Jk-WH-yI8">
             <objects>
-                <viewController id="Wrq-BI-yi0" sceneMemberID="viewController">
+                <viewController id="Wrq-BI-yi0" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gH9-hX-Poz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="grX-UN-SQ9">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="grX-UN-SQ9" id="Q7j-Ji-mUh">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -166,7 +166,7 @@
         <!--Ribbit-->
         <scene sceneID="RSm-Bb-hgP">
             <objects>
-                <viewController id="WZ0-qX-gtX" sceneMemberID="viewController">
+                <viewController id="WZ0-qX-gtX" customClass="SignupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q2E-tA-IaN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,11 +193,19 @@
                                 <rect key="frame" x="20" y="249" width="280" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signup:" destination="WZ0-qX-gtX" eventType="touchUpInside" id="wdQ-wp-moM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ribbit" id="VoT-or-dR1"/>
+                    <connections>
+                        <outlet property="emailField" destination="gAe-tT-jyx" id="M8T-7M-ddE"/>
+                        <outlet property="passwordField" destination="trG-Lv-jqJ" id="88G-0G-Nki"/>
+                        <outlet property="usernameField" destination="aZk-ZY-7Ws" id="SCF-AW-CNl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W41-ik-pSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

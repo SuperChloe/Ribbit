@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		894C59491C248FCB009A0275 /* parsekeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 894C59481C248FCB009A0275 /* parsekeys.plist */; settings = {ASSET_TAGS = (); }; };
+		894C594C1C24965C009A0275 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C594B1C24965C009A0275 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		894C594F1C249677009A0275 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C594E1C249677009A0275 /* SignupViewController.m */; settings = {ASSET_TAGS = (); }; };
 		89EC6CBF1C2349CE0034A68F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CBE1C2349CE0034A68F /* main.m */; };
 		89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CC11C2349CE0034A68F /* AppDelegate.m */; };
 		89EC6CC81C2349CE0034A68F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CC61C2349CE0034A68F /* Main.storyboard */; };
@@ -59,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		894C59481C248FCB009A0275 /* parsekeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parsekeys.plist; sourceTree = "<group>"; };
+		894C594A1C24965C009A0275 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		894C594B1C24965C009A0275 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		894C594D1C249677009A0275 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		894C594E1C249677009A0275 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		89EC6CBA1C2349CE0034A68F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EC6CBE1C2349CE0034A68F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89EC6CC01C2349CE0034A68F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,14 +172,18 @@
 			isa = PBXGroup;
 			children = (
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
-				894C59481C248FCB009A0275 /* parsekeys.plist */,
 				89EC6CC11C2349CE0034A68F /* AppDelegate.m */,
 				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
+				894C594A1C24965C009A0275 /* LoginViewController.h */,
+				894C594B1C24965C009A0275 /* LoginViewController.m */,
+				894C594D1C249677009A0275 /* SignupViewController.h */,
+				894C594E1C249677009A0275 /* SignupViewController.m */,
 				89EC6CFD1C235E4E0034A68F /* InboxViewController.h */,
 				89EC6CFE1C235E4E0034A68F /* InboxViewController.m */,
 				89EC6CC91C2349CE0034A68F /* Assets.xcassets */,
 				89EC6CCB1C2349CE0034A68F /* LaunchScreen.storyboard */,
 				89EC6CCE1C2349CE0034A68F /* Info.plist */,
+				894C59481C248FCB009A0275 /* parsekeys.plist */,
 				89EC6CBD1C2349CE0034A68F /* Supporting Files */,
 			);
 			path = Ribbit;
@@ -386,9 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894C594C1C24965C009A0275 /* LoginViewController.m in Sources */,
 				89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */,
 				89EC6CBF1C2349CE0034A68F /* main.m in Sources */,
 				89EC6CFF1C235E4E0034A68F /* InboxViewController.m in Sources */,
+				894C594F1C249677009A0275 /* SignupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
