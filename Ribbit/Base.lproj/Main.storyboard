@@ -176,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="grX-UN-SQ9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="grX-UN-SQ9">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="grX-UN-SQ9" id="Q7j-Ji-mUh">
@@ -190,7 +190,18 @@
                             <outlet property="delegate" destination="emx-5Y-POe" id="iwG-Od-HXh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipients" id="3mP-bc-Aeh"/>
+                    <navigationItem key="navigationItem" title="Recipients" id="3mP-bc-Aeh">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Fyf-oH-Xr5">
+                            <connections>
+                                <action selector="cancel:" destination="emx-5Y-POe" id="xPD-8T-Bl8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="DvM-yn-SJi">
+                            <connections>
+                                <action selector="send:" destination="emx-5Y-POe" id="GHY-gT-uB9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vR-w2-Tb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,16 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
-    
+
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error %@ %@", error, [error userInfo]);
         } else {
@@ -66,6 +67,7 @@
     
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
+
     
     return cell;
 }
