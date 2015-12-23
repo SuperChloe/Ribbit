@@ -17,8 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+    
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -37,6 +42,7 @@
     if ([segue.identifier isEqualToString:@"showEditFriends"]) {
         EditFriendsViewController *viewController = (EditFriendsViewController *)segue.destinationViewController;
         viewController.friends = [NSMutableArray arrayWithArray:self.friends];
+
     }
 }
 
