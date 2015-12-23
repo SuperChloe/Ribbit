@@ -159,31 +159,79 @@
                                                               handler:^(UIAlertAction * action) {}];
         
         [alertView addAction:defaultAction];
-        [self presentViewController:self.imagePicker animated:YES completion:nil];
+        [self presentViewController:alertView animated:YES completion:nil];
+        [self presentViewController:self.imagePicker animated:NO completion:nil];
     } else {
         [self uploadMessage];
-        [self reset];
-        [self.recipients removeAllObjects];
         [self.tabBarController setSelectedIndex:0];
     }
 }
 
 #pragma mark - Helper methods
 
+
+
+- (void)uploadMessage {
+    NSData *fileData;
+    NSString *fileName;
+    NSString *fileType;
+    
+    // Check if image or video
+    if (self.image != nil) {
+        UIImage *newImage = [self resizeImage:self.image toWidth:320.0f andHeight:480.0f];
+        fileData = UIImagePNGRepresentation(newImage);
+        fileName = @"image.png";
+        fileType = @"image";
+    } else {
+        fileData = [NSData dataWithContentsOfFile:self.videoFilePath];
+        fileName = @"video.mov";
+        fileType = @"video";
+    }
+    
+    PFFile *file = [PFFile fileWithName:fileName data:fileData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (error) {
+            UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"An error occurred!"
+                                                                               message:@"Please try sending your message again."
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [alertView addAction:defaultAction];
+            [self presentViewController:alertView animated:YES completion:nil];
+        } else {
+            PFObject *message = [PFObject objectWithClassName:@"Messages"];
+            [message setObject:file forKey:@"file"];
+            [message setObject:fileType forKey:@"fileType"];
+            [message setObject:self.recipients forKey:@"recipientIds"];
+            [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
+            [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];
+            [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                if (error) {
+                UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"An error occurred!"
+                                                                                   message:@"Please try sending your message again."
+                                                                            preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction * action) {}];
+                
+                [alertView addAction:defaultAction];
+                [self presentViewController:alertView animated:YES completion:nil];
+                } else {
+                    // Everything was successful!
+                    [self reset];
+                }
+            }];
+        }
+    }];
+}
+
 - (void)reset {
     self.image = nil;
     self.videoFilePath = nil;
     [self.recipients removeAllObjects];
-}
-
-- (void)uploadMessage {
-    // Check if image or video
-    if (self.image != nil) {
-        UIImage *newImage = [self resizeImage:self.image toWidth:320.0f andHeight:480.0f];
-    }
-    // If image, shrink it
-    // Upload the file itself
-    // Upload the message details
 }
 
 - (UIImage *)resizeImage:(UIImage *)image toWidth:(float)width andHeight:(float)height {
