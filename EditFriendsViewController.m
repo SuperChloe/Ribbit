@@ -65,16 +65,36 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
-    PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-    [friendsRelation addObject:user];
+    PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
+    
+    if ([self isFriend:user]) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+        for (PFUser *friend in self.friends) {
+            if ([friend.objectId isEqualToString:user.objectId]) {
+                [self.friends removeObject:friend];
+                break;
+            }
+        }
+        
+        [friendsRelation removeObject:user];
+        
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [self.friends addObject:user];
+        [friendsRelation addObject:user];
+        
+    }
+    
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error %@ %@", error, [error userInfo]);
         }
     }];
+    
+
 }
 
 #pragma mark - Helper methods
