@@ -11,6 +11,7 @@
 		894C594C1C24965C009A0275 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C594B1C24965C009A0275 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		894C594F1C249677009A0275 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C594E1C249677009A0275 /* SignupViewController.m */; settings = {ASSET_TAGS = (); }; };
 		894C59551C2750A6009A0275 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C59541C2750A6009A0275 /* EditFriendsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		894C59581C2A1E24009A0275 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C59571C2A1E24009A0275 /* FriendsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		89EC6CBF1C2349CE0034A68F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CBE1C2349CE0034A68F /* main.m */; };
 		89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CC11C2349CE0034A68F /* AppDelegate.m */; };
 		89EC6CC81C2349CE0034A68F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CC61C2349CE0034A68F /* Main.storyboard */; };
@@ -68,6 +69,8 @@
 		894C594E1C249677009A0275 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		894C59531C2750A6009A0275 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsViewController.h; path = ../EditFriendsViewController.h; sourceTree = "<group>"; };
 		894C59541C2750A6009A0275 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsViewController.m; path = ../EditFriendsViewController.m; sourceTree = "<group>"; };
+		894C59561C2A1E24009A0275 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		894C59571C2A1E24009A0275 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		89EC6CBA1C2349CE0034A68F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EC6CBE1C2349CE0034A68F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89EC6CC01C2349CE0034A68F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
 				89EC6CC11C2349CE0034A68F /* AppDelegate.m */,
 				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
+				894C59561C2A1E24009A0275 /* FriendsViewController.h */,
+				894C59571C2A1E24009A0275 /* FriendsViewController.m */,
 				894C59531C2750A6009A0275 /* EditFriendsViewController.h */,
 				894C59541C2750A6009A0275 /* EditFriendsViewController.m */,
 				894C594A1C24965C009A0275 /* LoginViewController.h */,
@@ -403,6 +408,7 @@
 			files = (
 				894C594C1C24965C009A0275 /* LoginViewController.m in Sources */,
 				89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */,
+				894C59581C2A1E24009A0275 /* FriendsViewController.m in Sources */,
 				89EC6CBF1C2349CE0034A68F /* main.m in Sources */,
 				89EC6CFF1C235E4E0034A68F /* InboxViewController.m in Sources */,
 				894C59551C2750A6009A0275 /* EditFriendsViewController.m in Sources */,
