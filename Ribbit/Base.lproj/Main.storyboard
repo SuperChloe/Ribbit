@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="825" y="839"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="laY-VA-LQg">
             <objects>
-                <tableViewController id="emx-5Y-POe" sceneMemberID="viewController">
+                <tableViewController id="emx-5Y-POe" customClass="CameraViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vZQ-yS-FC2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
