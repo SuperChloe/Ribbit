@@ -13,6 +13,10 @@
 		894C59551C2750A6009A0275 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C59541C2750A6009A0275 /* EditFriendsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		894C59581C2A1E24009A0275 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C59571C2A1E24009A0275 /* FriendsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		894C595B1C2A5038009A0275 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C595A1C2A5038009A0275 /* CameraViewController.m */; settings = {ASSET_TAGS = (); }; };
+		894C59601C2F2EF7009A0275 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C595C1C2F2EF7009A0275 /* icon_image.png */; settings = {ASSET_TAGS = (); }; };
+		894C59611C2F2EF7009A0275 /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C595D1C2F2EF7009A0275 /* icon_image@2x.png */; settings = {ASSET_TAGS = (); }; };
+		894C59621C2F2EF7009A0275 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C595E1C2F2EF7009A0275 /* icon_video.png */; settings = {ASSET_TAGS = (); }; };
+		894C59631C2F2EF7009A0275 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C595F1C2F2EF7009A0275 /* icon_video@2x.png */; settings = {ASSET_TAGS = (); }; };
 		89EC6CBF1C2349CE0034A68F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CBE1C2349CE0034A68F /* main.m */; };
 		89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CC11C2349CE0034A68F /* AppDelegate.m */; };
 		89EC6CC81C2349CE0034A68F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CC61C2349CE0034A68F /* Main.storyboard */; };
@@ -74,6 +78,10 @@
 		894C59571C2A1E24009A0275 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		894C59591C2A5038009A0275 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		894C595A1C2A5038009A0275 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		894C595C1C2F2EF7009A0275 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_image.png; path = inbox_icons/icon_image.png; sourceTree = "<group>"; };
+		894C595D1C2F2EF7009A0275 /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_image@2x.png"; path = "inbox_icons/icon_image@2x.png"; sourceTree = "<group>"; };
+		894C595E1C2F2EF7009A0275 /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_video.png; path = inbox_icons/icon_video.png; sourceTree = "<group>"; };
+		894C595F1C2F2EF7009A0275 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_video@2x.png"; path = "inbox_icons/icon_video@2x.png"; sourceTree = "<group>"; };
 		89EC6CBA1C2349CE0034A68F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EC6CBE1C2349CE0034A68F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89EC6CC01C2349CE0034A68F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -233,6 +241,10 @@
 		89EC6CFC1C2351740034A68F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				894C595C1C2F2EF7009A0275 /* icon_image.png */,
+				894C595D1C2F2EF7009A0275 /* icon_image@2x.png */,
+				894C595E1C2F2EF7009A0275 /* icon_video.png */,
+				894C595F1C2F2EF7009A0275 /* icon_video@2x.png */,
 				89EC6CF01C2351360034A68F /* camera.png */,
 				89EC6CF11C2351360034A68F /* camera@2x.png */,
 				89EC6CF21C2351360034A68F /* friends.png */,
@@ -378,14 +390,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				894C59491C248FCB009A0275 /* parsekeys.plist in Resources */,
+				894C59621C2F2EF7009A0275 /* icon_video.png in Resources */,
 				89EC6CCD1C2349CE0034A68F /* LaunchScreen.storyboard in Resources */,
 				89EC6CF81C2351360034A68F /* friends.png in Resources */,
 				89EC6CF91C2351360034A68F /* friends@2x.png in Resources */,
+				894C59631C2F2EF7009A0275 /* icon_video@2x.png in Resources */,
 				89EC6CF71C2351360034A68F /* camera@2x.png in Resources */,
 				89EC6CFA1C2351360034A68F /* inbox.png in Resources */,
 				89EC6CCA1C2349CE0034A68F /* Assets.xcassets in Resources */,
 				89EC6CF61C2351360034A68F /* camera.png in Resources */,
 				89EC6CC81C2349CE0034A68F /* Main.storyboard in Resources */,
+				894C59611C2F2EF7009A0275 /* icon_image@2x.png in Resources */,
+				894C59601C2F2EF7009A0275 /* icon_image.png in Resources */,
 				89EC6CFB1C2351360034A68F /* inbox@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
