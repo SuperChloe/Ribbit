@@ -102,6 +102,21 @@
         [self.moviePlayer setFullscreen:YES animated:YES];
     }
     
+    // Delete it!
+    NSMutableArray *recipientIds = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"recipientIds"]];
+    NSLog(@"Recipients: %@", recipientIds);
+    
+    if ([recipientIds count] == 1) {
+        // Last recipient - delete!
+        [self.selectedMessage deleteInBackground];
+    
+    } else {
+        // Remove recipient and save it
+        [recipientIds removeObject:[[PFUser currentUser] objectId]];
+        [self.selectedMessage setObject:recipientIds forKey:@"recipientIds"];
+        [self.selectedMessage saveInBackground];
+    }
+    
 }
 
 #pragma mark - Helper methods
