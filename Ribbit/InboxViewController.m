@@ -33,7 +33,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
     [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
     [query orderByDescending:@"createdAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } else {
@@ -75,17 +75,22 @@
     return cell;
 }
 
+#pragma mark - Table View Delegate
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PFObject *message = [self.messages objectAtIndex:indexPath.row];
+    
+    NSString *fileType = [message objectForKey:@"fileType"];
+    if ([fileType isEqualToString:@"image"]) {
+        [self performSegueWithIdentifier:@"showImage" sender:self];
+    } else {
+        
+    }
+    
 }
-*/
+
+
 
 - (IBAction)logout:(id)sender {
     [PFUser logOut];

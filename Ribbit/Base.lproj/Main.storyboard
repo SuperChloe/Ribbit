@@ -36,11 +36,33 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Wrq-BI-yi0" kind="push" identifier="showLogin" id="ToH-Ql-LsA"/>
+                        <segue destination="heE-O2-YM6" kind="push" identifier="showImage" id="wBW-xk-bdC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Av-L3-KVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470.39999999999998" y="177.97333333333333"/>
+            <point key="canvasLocation" x="470" y="177"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="lLC-fi-nId">
+            <objects>
+                <viewController id="heE-O2-YM6" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6lQ-iF-T9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="cSg-gK-uw9">
+                                <rect key="frame" x="0.0" y="65" width="320" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zNx-no-hVg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Q3-2R-532" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-446"/>
         </scene>
         <!--Ribbit-->
         <scene sceneID="1Jk-WH-yI8">
