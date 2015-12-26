@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.moviePlayer = [[MPMoviePlayerController alloc] init];
+    
 
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
@@ -85,11 +87,43 @@
     if ([fileType isEqualToString:@"image"]) {
         [self performSegueWithIdentifier:@"showImage" sender:self];
     } else {
+        // File type is video
+        PFFile *videoFile = [self.selectedMessage objectForKey:@"file"];
+        NSURL *fileUrl = [NSURL URLWithString:videoFile.url];
+        self.moviePlayer.contentURL = fileUrl;
+        [self.moviePlayer prepareToPlay];
+
+        //Set thumbnail
+        AVAsset *videoThumbnail = [AVAsset assetWithURL:fileUrl];
+        [AVAssetImageGenerator assetImageGeneratorWithAsset:videoThumbnail];
         
+         // Add it to the view controller so we can see it
+        [self.view addSubview:self.moviePlayer.view];
+        [self.moviePlayer setFullscreen:YES animated:YES];
     }
     
 }
 
+#pragma mark - Helper methods
+
+// To get video thumbnail
+// http://stackoverflow.com/questions/19212397/taking-thumbnail-image-from-video-always-returns-null/19272872#19272872
+- (UIImage *)thumbnailFromVideoAtURL:(NSURL *)url {
+    AVAsset *asset = [AVAsset assetWithURL:url];
+    
+    //  Get thumbnail at the very start of the video
+    CMTime thumbnailTime = [asset duration];
+    thumbnailTime.value = 0;
+    
+    //  Get image from the video at the given time
+    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    
+    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:thumbnailTime actualTime:NULL error:NULL];
+    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    
+    return thumbnail;
+}
 
 
 - (IBAction)logout:(id)sender {

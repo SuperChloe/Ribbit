@@ -18,6 +18,9 @@
 		894C59621C2F2EF7009A0275 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C595E1C2F2EF7009A0275 /* icon_video.png */; settings = {ASSET_TAGS = (); }; };
 		894C59631C2F2EF7009A0275 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C595F1C2F2EF7009A0275 /* icon_video@2x.png */; settings = {ASSET_TAGS = (); }; };
 		894C59661C2F3332009A0275 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C59651C2F3332009A0275 /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		894C59681C2F3F42009A0275 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894C59671C2F3F42009A0275 /* MediaPlayer.framework */; };
+		894C596A1C2F40DB009A0275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894C59691C2F40DB009A0275 /* AVFoundation.framework */; };
+		894C596C1C2F427A009A0275 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894C596B1C2F427A009A0275 /* AVKit.framework */; };
 		89EC6CBF1C2349CE0034A68F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CBE1C2349CE0034A68F /* main.m */; };
 		89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC6CC11C2349CE0034A68F /* AppDelegate.m */; };
 		89EC6CC81C2349CE0034A68F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EC6CC61C2349CE0034A68F /* Main.storyboard */; };
@@ -85,6 +88,9 @@
 		894C595F1C2F2EF7009A0275 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_video@2x.png"; path = "inbox_icons/icon_video@2x.png"; sourceTree = "<group>"; };
 		894C59641C2F3332009A0275 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		894C59651C2F3332009A0275 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		894C59671C2F3F42009A0275 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		894C59691C2F40DB009A0275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		894C596B1C2F427A009A0275 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		89EC6CBA1C2349CE0034A68F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EC6CBE1C2349CE0034A68F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89EC6CC01C2349CE0034A68F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894C596C1C2F427A009A0275 /* AVKit.framework in Frameworks */,
+				894C596A1C2F40DB009A0275 /* AVFoundation.framework in Frameworks */,
+				894C59681C2F3F42009A0275 /* MediaPlayer.framework in Frameworks */,
 				89EC6D201C2483F00034A68F /* libsqlite3.tbd in Frameworks */,
 				89EC6D1E1C2483E20034A68F /* libz.tbd in Frameworks */,
 				89EC6D1C1C2483D60034A68F /* SystemConfiguration.framework in Frameworks */,
@@ -276,6 +285,9 @@
 		89EC6D211C24840B0034A68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				894C596B1C2F427A009A0275 /* AVKit.framework */,
+				894C59691C2F40DB009A0275 /* AVFoundation.framework */,
+				894C59671C2F3F42009A0275 /* MediaPlayer.framework */,
 				89EC6D1F1C2483F00034A68F /* libsqlite3.tbd */,
 				89EC6D1D1C2483E20034A68F /* libz.tbd */,
 				89EC6D1B1C2483D60034A68F /* SystemConfiguration.framework */,
