@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [NSThread sleepForTimeInterval:1.5];
+    
     // Using plist to hide parse keys from github public repo
     // http://stackoverflow.com/a/12250837
     NSString *path = [[NSBundle mainBundle] pathForResource:@"parsekeys" ofType:@"plist"];
