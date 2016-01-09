@@ -32,6 +32,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self.navigationController.navigationBar setHidden:NO];
+    
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
     
