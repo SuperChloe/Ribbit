@@ -85,7 +85,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kDG-WO-Ys8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4m-k5-FuW">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4m-k5-FuW" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-R0-jvT">
@@ -125,8 +125,10 @@
                                 <constraints>
                                     <constraint firstItem="3W1-R0-jvT" firstAttribute="leading" secondItem="T4m-k5-FuW" secondAttribute="leading" constant="20" id="Q4N-TM-7Gm"/>
                                     <constraint firstItem="UVS-tZ-Za3" firstAttribute="top" secondItem="3W1-R0-jvT" secondAttribute="bottom" constant="1" id="RNt-IX-xzw"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bho-V9-7Qg" secondAttribute="bottom" constant="4" id="XfX-zV-rMi"/>
                                     <constraint firstAttribute="trailing" secondItem="bho-V9-7Qg" secondAttribute="trailing" constant="40" id="ZI2-8V-A2t"/>
                                     <constraint firstAttribute="trailing" secondItem="UVS-tZ-Za3" secondAttribute="trailing" constant="20" id="cpg-pD-axY"/>
+                                    <constraint firstAttribute="bottom" secondItem="bho-V9-7Qg" secondAttribute="bottom" priority="1" constant="4" id="czO-gc-O1V"/>
                                     <constraint firstItem="UVS-tZ-Za3" firstAttribute="leading" secondItem="T4m-k5-FuW" secondAttribute="leading" constant="20" id="dzu-1u-dJj"/>
                                     <constraint firstItem="UVS-tZ-Za3" firstAttribute="centerY" secondItem="T4m-k5-FuW" secondAttribute="centerY" id="hZ7-uI-X4P"/>
                                     <constraint firstItem="bho-V9-7Qg" firstAttribute="top" secondItem="UVS-tZ-Za3" secondAttribute="bottom" id="yiG-9m-aTe"/>
@@ -329,7 +331,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ac9-Zb-3Fa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLn-2F-L3H">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLn-2F-L3H" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="trG-Lv-jqJ">
@@ -386,8 +388,10 @@
                                     <constraint firstItem="aZk-ZY-7Ws" firstAttribute="leading" secondItem="dLn-2F-L3H" secondAttribute="leading" constant="20" id="dMW-PA-HBU"/>
                                     <constraint firstAttribute="trailing" secondItem="l1i-nI-ZMZ" secondAttribute="trailing" constant="40" id="fIW-m2-jU2"/>
                                     <constraint firstItem="gAe-tT-jyx" firstAttribute="top" secondItem="trG-Lv-jqJ" secondAttribute="bottom" constant="1" id="gFz-je-VMw"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="l1i-nI-ZMZ" secondAttribute="bottom" constant="4" id="hgj-zv-bWh"/>
                                     <constraint firstItem="gAe-tT-jyx" firstAttribute="leading" secondItem="dLn-2F-L3H" secondAttribute="leading" constant="20" id="jhc-mg-64U"/>
                                     <constraint firstItem="trG-Lv-jqJ" firstAttribute="top" secondItem="aZk-ZY-7Ws" secondAttribute="bottom" constant="1" id="o0o-yM-2Fh"/>
+                                    <constraint firstAttribute="bottom" secondItem="l1i-nI-ZMZ" secondAttribute="bottom" priority="1" constant="4" id="urh-M3-wvG"/>
                                     <constraint firstAttribute="trailing" secondItem="gAe-tT-jyx" secondAttribute="trailing" constant="20" id="vNY-cJ-sgl"/>
                                 </constraints>
                             </scrollView>

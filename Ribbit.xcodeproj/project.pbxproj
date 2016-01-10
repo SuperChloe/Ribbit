@@ -40,6 +40,7 @@
 		89EC6D1E1C2483E20034A68F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EC6D1D1C2483E20034A68F /* libz.tbd */; };
 		89EC6D201C2483F00034A68F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EC6D1F1C2483F00034A68F /* libsqlite3.tbd */; };
 		89FA36551C3F5FA900FAAA04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FA36541C3F5FA900FAAA04 /* Images.xcassets */; };
+		89FA366F1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		89EC6D1D1C2483E20034A68F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		89EC6D1F1C2483F00034A68F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		89FA36541C3F5FA900FAAA04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		89FA366E1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,26 +180,28 @@
 		89EC6CBC1C2349CE0034A68F /* Ribbit */ = {
 			isa = PBXGroup;
 			children = (
+				89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */,
+				89FA366E1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.h */,
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
 				89EC6CC11C2349CE0034A68F /* AppDelegate.m */,
-				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
-				894C59641C2F3332009A0275 /* ImageViewController.h */,
-				894C59651C2F3332009A0275 /* ImageViewController.m */,
 				894C59591C2A5038009A0275 /* CameraViewController.h */,
 				894C595A1C2A5038009A0275 /* CameraViewController.m */,
-				894C59561C2A1E24009A0275 /* FriendsViewController.h */,
-				894C59571C2A1E24009A0275 /* FriendsViewController.m */,
 				894C59531C2750A6009A0275 /* EditFriendsViewController.h */,
 				894C59541C2750A6009A0275 /* EditFriendsViewController.m */,
-				894C594A1C24965C009A0275 /* LoginViewController.h */,
-				894C594B1C24965C009A0275 /* LoginViewController.m */,
-				894C594D1C249677009A0275 /* SignupViewController.h */,
-				894C594E1C249677009A0275 /* SignupViewController.m */,
+				894C59561C2A1E24009A0275 /* FriendsViewController.h */,
+				894C59571C2A1E24009A0275 /* FriendsViewController.m */,
+				89FA36541C3F5FA900FAAA04 /* Images.xcassets */,
+				894C59641C2F3332009A0275 /* ImageViewController.h */,
+				894C59651C2F3332009A0275 /* ImageViewController.m */,
 				89EC6CFD1C235E4E0034A68F /* InboxViewController.h */,
 				89EC6CFE1C235E4E0034A68F /* InboxViewController.m */,
 				89EC6CCE1C2349CE0034A68F /* Info.plist */,
+				894C594A1C24965C009A0275 /* LoginViewController.h */,
+				894C594B1C24965C009A0275 /* LoginViewController.m */,
+				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
 				894C59481C248FCB009A0275 /* parsekeys.plist */,
-				89FA36541C3F5FA900FAAA04 /* Images.xcassets */,
+				894C594D1C249677009A0275 /* SignupViewController.h */,
+				894C594E1C249677009A0275 /* SignupViewController.m */,
 				89EC6CBD1C2349CE0034A68F /* Supporting Files */,
 			);
 			path = Ribbit;
@@ -401,6 +406,7 @@
 				894C59661C2F3332009A0275 /* ImageViewController.m in Sources */,
 				894C59551C2750A6009A0275 /* EditFriendsViewController.m in Sources */,
 				894C594F1C249677009A0275 /* SignupViewController.m in Sources */,
+				89FA366F1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
