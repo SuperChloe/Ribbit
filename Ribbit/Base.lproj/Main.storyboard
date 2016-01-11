@@ -301,10 +301,16 @@
         <scene sceneID="p6o-zE-Zk5">
             <objects>
                 <tabBarController id="h6K-hj-H8a" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="07p-d2-sgs">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="tabBarBackground" selectionIndicatorImage="tabBarSelectedBackground" id="07p-d2-sgs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="1AB-9m-MuU" kind="relationship" relationship="viewControllers" id="u0Q-cI-WbZ"/>
@@ -496,5 +502,7 @@
         <image name="icon_x" width="11" height="11"/>
         <image name="inbox.png" width="32" height="21"/>
         <image name="loginBackground" width="320" height="480"/>
+        <image name="tabBarBackground" width="1" height="1"/>
+        <image name="tabBarSelectedBackground" width="107" height="49"/>
     </resources>
 </document>
