@@ -29,6 +29,8 @@
     [Parse setApplicationId:dict[@"parseAppId"]
                   clientKey:dict[@"parseClientKey"]];
     
+    [self customizeUserInterface];
+    
     return YES;
 }
 
@@ -54,4 +56,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Helper methods
+
+- (void)customizeUserInterface {
+    //Customize the nav bar
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.553 green:0.435 blue:0.718 alpha:1.0]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+}
+
+
 @end
+
