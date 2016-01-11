@@ -43,6 +43,7 @@
 		89FA366F1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */; };
 		89FA36751C43339E00FAAA04 /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA36721C43339E00FAAA04 /* MSCellAccessory.m */; };
 		89FA36761C43339E00FAAA04 /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA36741C43339E00FAAA04 /* UIView+AccessViewController.m */; };
+		89FA36781C434C7400FAAA04 /* GravatarUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA36771C434C7400FAAA04 /* GravatarUrlBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		89FA36721C43339E00FAAA04 /* MSCellAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCellAccessory.m; sourceTree = "<group>"; };
 		89FA36731C43339E00FAAA04 /* UIView+AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AccessViewController.h"; sourceTree = "<group>"; };
 		89FA36741C43339E00FAAA04 /* UIView+AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AccessViewController.m"; sourceTree = "<group>"; };
+		89FA36771C434C7400FAAA04 /* GravatarUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GravatarUrlBuilder.m; path = MSCellAccessory/GravatarUrlBuilder.m; sourceTree = "<group>"; };
+		89FA36791C434C7900FAAA04 /* GravatarUrlBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GravatarUrlBuilder.h; path = MSCellAccessory/GravatarUrlBuilder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,9 +189,6 @@
 		89EC6CBC1C2349CE0034A68F /* Ribbit */ = {
 			isa = PBXGroup;
 			children = (
-				89FA36701C43339E00FAAA04 /* MSCellAccessory */,
-				89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */,
-				89FA366E1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.h */,
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
 				89EC6CC11C2349CE0034A68F /* AppDelegate.m */,
 				894C59591C2A5038009A0275 /* CameraViewController.h */,
@@ -197,6 +197,8 @@
 				894C59541C2750A6009A0275 /* EditFriendsViewController.m */,
 				894C59561C2A1E24009A0275 /* FriendsViewController.h */,
 				894C59571C2A1E24009A0275 /* FriendsViewController.m */,
+				89FA36791C434C7900FAAA04 /* GravatarUrlBuilder.h */,
+				89FA36771C434C7400FAAA04 /* GravatarUrlBuilder.m */,
 				89FA36541C3F5FA900FAAA04 /* Images.xcassets */,
 				894C59641C2F3332009A0275 /* ImageViewController.h */,
 				894C59651C2F3332009A0275 /* ImageViewController.m */,
@@ -206,10 +208,13 @@
 				894C594A1C24965C009A0275 /* LoginViewController.h */,
 				894C594B1C24965C009A0275 /* LoginViewController.m */,
 				89EC6CC61C2349CE0034A68F /* Main.storyboard */,
+				89FA36701C43339E00FAAA04 /* MSCellAccessory */,
 				894C59481C248FCB009A0275 /* parsekeys.plist */,
 				894C594D1C249677009A0275 /* SignupViewController.h */,
 				894C594E1C249677009A0275 /* SignupViewController.m */,
 				89EC6CBD1C2349CE0034A68F /* Supporting Files */,
+				89FA366E1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.h */,
+				89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */,
 			);
 			path = Ribbit;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				894C595B1C2A5038009A0275 /* CameraViewController.m in Sources */,
 				89EC6CC21C2349CE0034A68F /* AppDelegate.m in Sources */,
 				894C59581C2A1E24009A0275 /* FriendsViewController.m in Sources */,
+				89FA36781C434C7400FAAA04 /* GravatarUrlBuilder.m in Sources */,
 				89EC6CBF1C2349CE0034A68F /* main.m in Sources */,
 				89EC6CFF1C235E4E0034A68F /* InboxViewController.m in Sources */,
 				89FA36751C43339E00FAAA04 /* MSCellAccessory.m in Sources */,
