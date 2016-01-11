@@ -69,17 +69,29 @@
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     
-    // 1. Get e-mai address
-    NSString *email = [user objectForKey:@"email"];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        // 1. Get e-mai address
+        NSString *email = [user objectForKey:@"email"];
+        
+        // 2. Create the md5 hash
+        NSURL *gravatarUrl = [GravatarUrlBuilder getGravatarUrl:email];
+        
+        // 3. Request the image from gravatar
+        NSData *imageData = [NSData dataWithContentsOfURL:gravatarUrl];
+        
+        if (imageData != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 4. Set image in cell
+                cell.imageView.image = [UIImage imageWithData:imageData];
+                [cell setNeedsLayout];
+            });
+        }
+    });
     
-    // 2. Create the md5 hash
-    NSURL *gravatarUrl = [GravatarUrlBuilder getGravatarUrl:email];
+    cell.imageView.image = [UIImage imageNamed:@"icon_person"];
     
-    // 3. Request the image from gravatar
-    NSData *imageData = [NSData dataWithContentsOfURL:gravatarUrl];
-    
-    // 4. Set image in cell
-    cell.imageView.image = [UIImage imageWithData:imageData];
+
 
     
     return cell;
