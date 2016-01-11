@@ -41,6 +41,8 @@
 		89EC6D201C2483F00034A68F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EC6D1F1C2483F00034A68F /* libsqlite3.tbd */; };
 		89FA36551C3F5FA900FAAA04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FA36541C3F5FA900FAAA04 /* Images.xcassets */; };
 		89FA366F1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */; };
+		89FA36751C43339E00FAAA04 /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA36721C43339E00FAAA04 /* MSCellAccessory.m */; };
+		89FA36761C43339E00FAAA04 /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA36741C43339E00FAAA04 /* UIView+AccessViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		89FA36541C3F5FA900FAAA04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		89FA366E1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		89FA36711C43339E00FAAA04 /* MSCellAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCellAccessory.h; sourceTree = "<group>"; };
+		89FA36721C43339E00FAAA04 /* MSCellAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCellAccessory.m; sourceTree = "<group>"; };
+		89FA36731C43339E00FAAA04 /* UIView+AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AccessViewController.h"; sourceTree = "<group>"; };
+		89FA36741C43339E00FAAA04 /* UIView+AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AccessViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 		89EC6CBC1C2349CE0034A68F /* Ribbit */ = {
 			isa = PBXGroup;
 			children = (
+				89FA36701C43339E00FAAA04 /* MSCellAccessory */,
 				89FA366D1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m */,
 				89FA366E1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.h */,
 				89EC6CC01C2349CE0034A68F /* AppDelegate.h */,
@@ -265,6 +272,17 @@
 				89EC6D001C2482B10034A68F /* parse-library-1.11.0 */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89FA36701C43339E00FAAA04 /* MSCellAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				89FA36711C43339E00FAAA04 /* MSCellAccessory.h */,
+				89FA36721C43339E00FAAA04 /* MSCellAccessory.m */,
+				89FA36731C43339E00FAAA04 /* UIView+AccessViewController.h */,
+				89FA36741C43339E00FAAA04 /* UIView+AccessViewController.m */,
+			);
+			path = MSCellAccessory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,8 +421,10 @@
 				894C59581C2A1E24009A0275 /* FriendsViewController.m in Sources */,
 				89EC6CBF1C2349CE0034A68F /* main.m in Sources */,
 				89EC6CFF1C235E4E0034A68F /* InboxViewController.m in Sources */,
+				89FA36751C43339E00FAAA04 /* MSCellAccessory.m in Sources */,
 				894C59661C2F3332009A0275 /* ImageViewController.m in Sources */,
 				894C59551C2750A6009A0275 /* EditFriendsViewController.m in Sources */,
+				89FA36761C43339E00FAAA04 /* UIView+AccessViewController.m in Sources */,
 				894C594F1C249677009A0275 /* SignupViewController.m in Sources */,
 				89FA366F1C42063F00FAAA04 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
@@ -573,7 +593,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.RibbitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ribbit.app/Ribbit";
 			};
 			name = Debug;
 		};
@@ -585,7 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.RibbitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ribbit.app/Ribbit";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
